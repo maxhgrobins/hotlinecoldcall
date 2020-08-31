@@ -39,13 +39,14 @@ html, body {
 	bottom: 0;
 	left: 0;
 	right: 0;
+	text-align: center;
 }
 
 .tri {
 	position: absolute;
 	margin: auto;
 	z-index: 0;
-	max-width: 100px;
+	max-width: 10%;
 	position: relative;
 	object-fit: cover;
 	transition: 0.2s linear;
@@ -62,8 +63,8 @@ html, body {
 
 .tri-1-1 {
 	position: absolute;
-	transform: translate(0px, 435px);
-	width: 100px;
+	transform: translate(0%, 481.5%);
+	width: 100%;
 	transition: 0.5s linear;
 
 	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
@@ -71,8 +72,8 @@ html, body {
 }
 .tri-1-2 {
 	position: absolute;
-	transform: translate(0px, 435px);
-	width: 100px;
+	transform: translate(0%, 481.5%);
+	width: 100%;
 	transition: 0.5s linear;
 
 	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
@@ -80,8 +81,8 @@ html, body {
 }
 .tri-1-3 {
 	position: absolute;
-	transform: translate(0px, 435px);
-	width: 100px;
+	transform: translate(0%, 481.5%);
+	width: 100%;
 	transition: 0.5s linear;
 
 	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
@@ -91,8 +92,8 @@ html, body {
 
 .tri-2-1 {
 	position: absolute;
-	transform: translate(-50px, 348.65px);
-	width: 100px;
+	transform: translate(-50%, 386%);
+	width: 100%;
 	transition: 0.5s linear;
 
 	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
@@ -100,8 +101,8 @@ html, body {
 }
 .tri-2-2 {
 	position: absolute;
-	transform: translate(-50px, 348.65px);
-	width: 100px;
+	transform: translate(-50%, 386%);
+	width: 100%;
 	transition: 0.5s linear;
 
 	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
@@ -109,8 +110,8 @@ html, body {
 }
 .tri-2-3 {
 	position: absolute;
-	transform: translate(-50px, 348.65px);
-	width: 100px;
+	transform: translate(-50%, 386%);
+	width: 100%;
 	transition: 0.5s linear;
 
 	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
@@ -120,8 +121,8 @@ html, body {
 
 .tri-3-1 {
 	position: absolute;
-	transform: translate(50px, 348.65px);
-	width: 100px;
+	transform: translate(50%, 386%);
+	width: 100%;
 	transition: 0.5s linear;
 
 	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
@@ -129,8 +130,8 @@ html, body {
 }
 .tri-3-2 {
 	position: absolute;
-	transform: translate(50px, 348.65px);
-	width: 100px;
+	transform: translate(50%, 386%);
+	width: 100%;
 	transition: 0.5s linear;
 
 	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
@@ -138,8 +139,8 @@ html, body {
 }
 .tri-3-3 {
 	position: absolute;
-	transform: translate(50px, 348.65px);
-	width: 100px;
+	transform: translate(50%, 386%);
+	width: 100%;
 	transition: 0.5s linear;
 
 	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
@@ -163,17 +164,9 @@ html, body {
 	left: 0px;
 }
 
-.topleft:hover {
-	filter: invert(100%);
-}
-
 .topright {
 	top: 0px;
 	right: 0px;
-}
-
-.topright:hover {
-	filter: invert(100%);
 }
 
 .bottomleft {
@@ -181,15 +174,25 @@ html, body {
 	left: 0px;
 }
 
-.bottomleft:hover {
-	filter: invert(100%);
-}
-
 .bottomright {
 	bottom: 0px;
 	right: 0px;
 }
 
+/*
+.topleft:hover {
+	filter: invert(100%);
+}
+
+.topright:hover {
+	filter: invert(100%);
+}
+
+.bottomleft:hover {
+	filter: invert(100%);
+}
+
 .bottomright:hover {
 	filter: invert(100%);
 }
+*/
