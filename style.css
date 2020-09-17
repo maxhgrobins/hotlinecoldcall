@@ -3,9 +3,111 @@ html, body {
   padding: 0;
   margin: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   cursor:  url("cursor.cur") 25 25, pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/*
+
+	.icons {
+	    position: absolute;
+
+	    transform: translate(-0%, -0%);
+
+	    width: 100%;
+	    height: 100%;
+	}
+
+	.tri-1-1 {
+		position: absolute;
+		transform: translate(0%, -0%);
+		width: 10%;
+		transition: 0.5s linear;
+
+		clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+		-webkit-clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+	}
+	.tri-1-2 {
+		position: absolute;
+		transform: translate(0%, 0%);
+		width: 10%;
+		transition: 0.5s linear;
+
+		clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+		-webkit-clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+	}
+	.tri-1-3 {
+		position: absolute;
+		transform: translate(0%, 0%);
+		width: 10%;
+		transition: 0.5s linear;
+
+		clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+		-webkit-clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+	}
+
+
+	.tri-2-1 {
+		position: absolute;
+		transform: translate(-0%, -0%);
+		width: 10%;
+		transition: 0.5s linear;
+
+		clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+		-webkit-clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+	}
+	.tri-2-2 {
+		position: absolute;
+		transform: translate(0%, 0%);
+		width: 10%;
+		transition: 0.5s linear;
+
+		clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+		-webkit-clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+	}
+	.tri-2-3 {
+		position: absolute;
+		transform: translate(0%, 0%);
+		width: 10%;
+		transition: 0.5s linear;
+
+		clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+		-webkit-clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+	}
+
+
+	.tri-3-1 {
+		position: absolute;
+		transform: translate(0%, 0%);
+		width: 10%;
+		transition: 0.5s linear;
+
+		clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+		-webkit-clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+	}
+	.tri-3-2 {
+		position: absolute;
+		transform: translate(0%, 0%);
+		width: 10%;
+		transition: 0.5s linear;
+
+		clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+		-webkit-clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+	}
+	.tri-3-3 {
+		position: absolute;
+		transform: translate(0%, 0%);
+		width: 10%;
+		transition: 0.5s linear;
+
+		clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+		-webkit-clip-path: polygon(50% 0%, 0 94.7%, 100% 94.7%);
+	}
+
+*/
 
 .temp{
 	font-size: 20px;
@@ -14,149 +116,21 @@ html, body {
 	bottom:5%;
 	left: 30%;
 	color: white;
-}
-
-.logo {
-	position: absolute;
-	top: 3%;
-	margin: auto;
-	padding:0;
-	left: 0;
-	right: 0;
-	height:20%;
-	z-index:100;
-}
-
-.logo:hover {
-	filter: invert(100%);
-}
-
-#shape-container {
-	position: relative;
-	margin: auto;
-	padding:0;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	text-align: center;
-}
-
-.tri {
-	position: absolute;
-	margin: auto;
-	z-index: 0;
-	max-width: 10%;
-	position: relative;
-	object-fit: cover;
-	transition: 0.2s linear;
-}
-
-.tri:hover {filter: invert(100%);}
-
-.icons {
- 	position: absolute;
- 	top: 66.7108753%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.tri-1-1 {
-	position: absolute;
-	transform: translate(0%, 481.5%);
-	width: 100%;
-	transition: 0.5s linear;
-
-	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
-	-webkit-clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
-}
-.tri-1-2 {
-	position: absolute;
-	transform: translate(0%, 481.5%);
-	width: 100%;
-	transition: 0.5s linear;
-
-	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
-	-webkit-clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
-}
-.tri-1-3 {
-	position: absolute;
-	transform: translate(0%, 481.5%);
-	width: 100%;
-	transition: 0.5s linear;
-
-	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
-	-webkit-clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
-}
-
-
-.tri-2-1 {
-	position: absolute;
-	transform: translate(-50%, 386%);
-	width: 100%;
-	transition: 0.5s linear;
-
-	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
-	-webkit-clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
-}
-.tri-2-2 {
-	position: absolute;
-	transform: translate(-50%, 386%);
-	width: 100%;
-	transition: 0.5s linear;
-
-	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
-	-webkit-clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
-}
-.tri-2-3 {
-	position: absolute;
-	transform: translate(-50%, 386%);
-	width: 100%;
-	transition: 0.5s linear;
-
-	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
-	-webkit-clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
-}
-
-
-.tri-3-1 {
-	position: absolute;
-	transform: translate(50%, 386%);
-	width: 100%;
-	transition: 0.5s linear;
-
-	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
-	-webkit-clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
-}
-.tri-3-2 {
-	position: absolute;
-	transform: translate(50%, 386%);
-	width: 100%;
-	transition: 0.5s linear;
-
-	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
-	-webkit-clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
-}
-.tri-3-3 {
-	position: absolute;
-	transform: translate(50%, 386%);
-	width: 100%;
-	transition: 0.5s linear;
-
-	clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
-	-webkit-clip-path: polygon(50% 0%, 0 95.7%, 100% 95.7%);
+	pointer-events: none;
 }
 
 #corners{
 	position: absolute;
 	width: 100%;
 	height: 100%;
+	
 }
 
 #corners img {
-	height: 25%;
+	width: 25%;
 	position: absolute;
-	z-index:100;
+	pointer-events: none;
+
 }
 
 .topleft {
@@ -196,3 +170,153 @@ html, body {
 	filter: invert(100%);
 }
 */
+
+
+
+#triangles{
+	width:60%;
+	margin: 0 auto;
+	display: flex;
+  	flex-direction: column;
+  	transition: 0.2s linear;
+}
+
+.triangles img {
+	max-height: 100%;
+	max-width: 100%;
+	transition: 0.3s;
+}
+
+#top-row, #mid-row, #bottom-row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin: 3.4%
+}
+
+.main_tri {
+	z-index: 100;
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: -5%;
+
+	-webkit-clip-path: polygon(0% 93%, 50% 6%, 54% 13%, 100% 93%);
+	clip-path: polygon(0% 93%, 50% 6%, 54% 13%, 100% 93%);
+}
+
+.tri {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	transform: rotate(180deg);
+	margin: -5%;
+	transition: 0.3s;
+
+	-webkit-clip-path: polygon(0% 93%, 50% 6%, 54% 13%, 100% 93%);
+	clip-path: polygon(0% 93%, 50% 6%, 54% 13%, 100% 93%);
+}
+
+.start_tri_l {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	transform: translateX(50%);
+	margin: -5%;
+	transition: 0.3s;
+
+	-webkit-clip-path: polygon(0% 93%, 50% 6%, 54% 13%, 100% 93%);
+	clip-path: polygon(0% 93%, 50% 6%, 54% 13%, 100% 93%);
+}
+
+.start_tri_r {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	transform: translateX(-50%);
+	margin: -5%;
+	transition: 0.3s;
+
+	-webkit-clip-path: polygon(0% 93%, 50% 6%, 54% 13%, 100% 93%);
+	clip-path: polygon(0% 93%, 50% 6%, 54% 13%, 100% 93%);
+}
+
+.start_tri_bottom {
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	transform: translateY(-86%);
+	margin: -5%;
+	transition: 0.3s;
+
+	-webkit-clip-path: polygon(0% 93%, 50% 6%, 54% 13%, 100% 93%);
+	clip-path: polygon(0% 93%, 50% 6%, 54% 13%, 100% 93%);
+}
+
+.tri:hover {
+	filter: invert(100%);
+	/*
+		-webkit-animation: swing-top-left-bck 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: swing-top-left-bck 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        */
+}
+.main_tri:hover {
+	filter: invert(100%);
+}
+
+
+
+
+@media only screen and (max-width:768px) {
+  /* For mobile phones: */
+  #triangles {
+    width:100%;
+  }
+}
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-9-15 19:46:23
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation swing-top-left-bck
+ * ----------------------------------------
+ */
+@-webkit-keyframes swing-top-left-bck {
+  0% {
+    -webkit-transform: rotate3d(-1, 1, 0, 0deg);
+            transform: rotate3d(-1, 1, 0, 0deg);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: rotate3d(-1, 1, 0, 180deg);
+            transform: rotate3d(-1, 1, 0, 180deg);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+}
+@keyframes swing-top-left-bck {
+  0% {
+    -webkit-transform: rotate3d(-1, 1, 0, 0deg);
+            transform: rotate3d(-1, 1, 0, 0deg);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: rotate3d(-1, 1, 0, 180deg);
+            transform: rotate3d(-1, 1, 0, 180deg);
+    -webkit-transform-origin: 0% 0%;
+            transform-origin: 0% 0%;
+  }
+}
