@@ -25,7 +25,7 @@
 	</div>
 
 
-	<img src="triangle_t.png" alt="triangle" width="100%" class="r_tri">
+	<a href="https://twitter.com/hotlinecoldcall?s=20"><img src="triangle_t.png" alt="triangle" width="100%" class="r_tri"></a>
 	<img src="triangle_p.png" alt="triangle" width="100%" class="l_tri">
 
 
@@ -42,7 +42,7 @@
 			</div>
 
 			<div class="start_tri_r" id="tri-w-b" style="z-index: 70">
-				<img src="triangle_b.png" alt="triangle" width="100%">
+				<a href="http://drivemeinsane.com/"><img src="triangle_b.png" alt="triangle" width="100%"></a>
 			</div>
 
 			<div class="main_tri" id="tri-s">
@@ -58,7 +58,7 @@
 		<div id="mid-row">
 
 			<div class="start_tri_l" id="tri-d-b" style="z-index: 90">
-				<img src="triangle_b.png" alt="triangle" width="100%">
+				<a href="https://15.ai/"><img src="triangle_b.png" alt="triangle" width="100%"></a>
 			</div>
 
 			<div class="main_tri" id="tri-d">
@@ -66,7 +66,7 @@
 			</div>
 
 			<div class="start_tri_bottom" id="tri-s-b" style="z-index: 50">
-				<img src="triangle_b.png" alt="triangle" width="100%">
+				<a href="http://www.comicsanscriminal.com/"><img src="triangle_b.png" alt="triangle" width="100%"></a>
 			</div>
 
 		</div>
@@ -83,55 +83,58 @@
 	</div>
 
 
+<!-- The Modal -->
+<div id="w_modal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY">
+	</iframe>
+  </div>
+
+</div>
+
+<!-- The Modal -->
+<div id="s_modal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <iframe src="https://www.youtube.com/embed/gZ_qJ7esLZo">
+	</iframe>
+  </div>
+
+</div>
+
+<!-- The Modal -->
+<div id="d_modal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <iframe src="https://www.youtube.com/embed/AHWOtttLBeM">
+	</iframe>
+  </div>
+
+</div>
+
+<!-- The Modal -->
+<div id="p_modal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Phone number: 999 idk what to put here</p>
+	</iframe>
+  </div>
+
+</div>
 
 
 
-	<script type="text/javascript">
-		/*
-		var i=0;
-		var j=0;
-		var k=0;
 
-		function pop1() {
-			if (i==0) {
-				document.getElementById("tri-1-2").style.transform = "translateY(572.9%) rotate(180deg)";
-				document.getElementById("tri-1-3").style.transform = "translate(-49.9%, 477.3%) rotate(180deg)";
-				i=1;
-			}
-			else{
-				document.getElementById("tri-1-2").style.transform = "translate(0%, 481.5%) rotate(0)";
-				document.getElementById("tri-1-3").style.transform = "translate(0%, 481.5%) rotate(0)";
-				i=0;
-			}
-		}
-
-		function pop2() {
-			if (j==0) {
-				document.getElementById("tri-2-2").style.transform = "translate(-100%, 381.9%) rotate(180deg)";
-				document.getElementById("tri-2-3").style.transform = "translateY(381.9%) rotate(180deg)";
-				j=1;
-			}
-			else{
-				document.getElementById("tri-2-2").style.transform = "translate(-50%, 386%) rotate(0)";
-				document.getElementById("tri-2-3").style.transform = "translate(-50%, 386%) rotate(0)";
-				j=0;
-			}
-		}
-
-		function pop3() {
-			if (k==0) {
-				document.getElementById("tri-3-2").style.transform = "translate(99.9%, 381.8%) rotate(180deg)";
-				document.getElementById("tri-3-3").style.transform = "translate(49.9%, 477.3%) rotate(180deg)";
-				k=1;
-			}
-			else{
-				document.getElementById("tri-3-2").style.transform = "translate(50%, 386%) rotate(0)";
-				document.getElementById("tri-3-3").style.transform = "translate(50%, 386%) rotate(0)";
-				k=0;
-			}
-		}
-		*/
-	</script>
+	<script type="text/javascript">	</script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script>
@@ -148,6 +151,48 @@
 		$("#tri-d").click(function() {
   			$('#tri-d-c').toggleClass('start_tri_bottom').toggleClass('tri');
   			$('#tri-d-b').toggleClass('start_tri_l').toggleClass('tri');
+		});
+
+
+
+		$("#tri-w-c").click(function() {
+  			$('#w_modal').css({"display":"block"});
+		});
+		$(".close").click(function() {
+  			$('#w_modal').css({"display":"none"});
+		});
+		$(".modal").click(function() {
+  			$('#w_modal').css({"display":"none"});
+		});
+
+		$("#tri-s-c").click(function() {
+  			$('#s_modal').css({"display":"block"});
+		});
+		$(".close").click(function() {
+  			$('#s_modal').css({"display":"none"});
+		});
+		$(".modal").click(function() {
+  			$('#s_modal').css({"display":"none"});
+		});
+
+		$("#tri-d-c").click(function() {
+  			$('#d_modal').css({"display":"block"});
+		});
+		$(".close").click(function() {
+  			$('#d_modal').css({"display":"none"});
+		});
+		$(".modal").click(function() {
+  			$('#d_modal').css({"display":"none"});
+		});
+
+		$(".l_tri").click(function() {
+  			$('#p_modal').css({"display":"block"});
+		});
+		$(".close").click(function() {
+  			$('#p_modal').css({"display":"none"});
+		});
+		$(".modal").click(function() {
+  			$('#p_modal').css({"display":"none"});
 		});
 
 	</script>
