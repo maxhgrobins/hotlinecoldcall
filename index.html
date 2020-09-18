@@ -25,6 +25,9 @@
 	</div>
 
 
+	<img src="triangle_t.png" alt="triangle" width="100%" class="r_tri">
+	<img src="triangle_p.png" alt="triangle" width="100%" class="l_tri">
+
 
 	<div id="triangles">
 
@@ -34,15 +37,15 @@
 				<img src="triangle_c.png" alt="triangle" width="100%">
 			</div>
 
-			<div class="main_tri" id="tri-w" onclick="pop2()">
+			<div class="main_tri" id="tri-w">
 				<img src="triangle_w.png" alt="triangle" width="100%">
 			</div>
 
-			<div class="start_tri_l" id="tri-w-b">
+			<div class="start_tri_r" id="tri-w-b" style="z-index: 70">
 				<img src="triangle_b.png" alt="triangle" width="100%">
 			</div>
 
-			<div class="main_tri" id="tri-s" onclick="pop3()">
+			<div class="main_tri" id="tri-s">
 				<img src="triangle_s.png" alt="triangle" width="100%">
 			</div>
 
@@ -54,15 +57,15 @@
 
 		<div id="mid-row">
 
-			<div class="start_tri_l" id="tri-d-b">
+			<div class="start_tri_l" id="tri-d-b" style="z-index: 90">
 				<img src="triangle_b.png" alt="triangle" width="100%">
 			</div>
 
-			<div class="main_tri" id="tri-d" onclick="pop1()">
+			<div class="main_tri" id="tri-d">
 				<img src="triangle_d.png" alt="triangle" width="100%">
 			</div>
 
-			<div class="start_tri_r" id="tri-s-b">
+			<div class="start_tri_bottom" id="tri-s-b" style="z-index: 50">
 				<img src="triangle_b.png" alt="triangle" width="100%">
 			</div>
 
@@ -134,14 +137,17 @@
 	<script>
 		$("#tri-w").click(function() {
   			$('#tri-w-c').toggleClass('start_tri_l').toggleClass('tri');
+  			$('#tri-w-b').toggleClass('start_tri_r').toggleClass('tri');
 		});
 
 		$("#tri-s").click(function() {
   			$('#tri-s-c').toggleClass('start_tri_r').toggleClass('tri');
+  			$('#tri-s-b').toggleClass('start_tri_bottom').toggleClass('tri');
 		});
 
 		$("#tri-d").click(function() {
   			$('#tri-d-c').toggleClass('start_tri_bottom').toggleClass('tri');
+  			$('#tri-d-b').toggleClass('start_tri_l').toggleClass('tri');
 		});
 
 	</script>
