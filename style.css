@@ -1,13 +1,22 @@
 html, body {
-  background-color: black;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  min-height: 100vh;
-  cursor:  url("cursor.cur") 25 25, pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  	background-color: black;
+  	padding: 0;
+  	margin: 0;
+  	width: 100%;
+  	min-height: 100vh;
+  	cursor:  url("cursor.cur") 25 25, pointer;
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+
+  	user-drag: none; 
+  	-webkit-touch-callout: none;
+  	-webkit-user-select: none;
+  	-khtml-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	-o-user-select: none;
+  	user-select: none;
 }
 
 a {
@@ -306,6 +315,17 @@ iframe {
 	cursor: url("pointer.cur") 25 25, pointer;
 }
 
+
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
 
 
 
