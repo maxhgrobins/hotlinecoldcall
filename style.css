@@ -112,6 +112,8 @@ p {
 	position: fixed;
 	top: 0; left: -1%; bottom: 0; right: 88.4%;
 	transform: rotate(90deg);
+	-webkit-clip-path: polygon(0% 100%, 50% 0%, 57% 10%, 101% 100%);
+	clip-path: polygon(0% 100%, 50% 0%, 57% 10%, 101% 100%);
 }
 
 .r_tri {
@@ -121,6 +123,8 @@ p {
 	position: fixed;
 	top: 0; left: 88.8%; bottom: 0; right: 0;
 	transform: rotate(270deg);
+	-webkit-clip-path: polygon(0% 100%, 50% 0%, 57% 10%, 101% 100%);
+	clip-path: polygon(0% 100%, 50% 0%, 57% 10%, 101% 100%);
 }
 
 
