@@ -58,6 +58,23 @@ p {
     color: #fcd204;
 }
 
+.credits{
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	font-family: 'vcr_osd_monoregular', Arial, sans-serif;
+	color: #fcd204;
+	font-size: 2vw;
+}
+
+.credits:hover{
+	filter: invert(100);
+}
+
+.cred_list{
+	font-size: 3vh;
+}
 
 .temp{
 	font-size: 20px;
@@ -359,5 +376,11 @@ iframe {
   }
   iframe {
   	height:87%; 
+  }
+  .credits{
+  	font-size: 2vh;
+  	bottom: 50%;
+  	left:0;
+  	transform: translate(-40%,-50%) rotate(90deg);
   }
 }
