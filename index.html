@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Boring necessary HTML stuff goes here -->
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+<title>Hotline Coldcall</title>																<!-- The name of the tab -->
+<link href="style.css" type="text/css" rel="stylesheet">									<!-- Make sure to reference your stylesheet -->
+<link rel="shortcut icon" href="triangle.ico" type="image/x-icon"/>							<!-- The icon in the tab -->
+</head>
+
+
+<!-- Here begins the stuff that's actually on the screen! -->
+
+
+<body>
+
+	<div id="corners">
+		<img src="topleft.png" alt="triangles in top left" class="topleft">						<!-- This is just me creating the 4 corner images -->
+		<img src="topright.png" alt="triangles in top right" class="topright">					<!-- The "alt" text is what will be displayed if the -->
+		<img src="bottomleft.png" alt="triangles in bottom left" class="bottomleft">			<!-- image doesn't load or audio description is being -->
+		<img src="bottomright.png" alt="triangles in bottom right" class="bottomright">			<!-- used. Bonus points for accessability always! -->
+	</div>
+
+
+	<!-- This stuff here is the twitter triangle. As you can see its just an image with a cheeky little "onlcick" command on the end, which calls the function openInNewTab, and for some reason, that isn't a default function. No, I don't know why. Yes, I copied it from the internet. You can find the actual code for it down at the bottom of the file with the rest of the JavaScript -->
+	<img src="triangle_t.png" alt="triangle" width="100%" class="r_tri" onclick="openInNewTab('https://twitter.com/hotlinecoldcall?s=20')">
+
+	<!-- Here we create the phone triangle. As you can see, its just a boring old image, this is becasue the popup with the phone numbers isn't as simple as a hyperlink... we're gonna do some exciting JavaScript wizardry with modals... -->
+	<img src="triangle_p.png" alt="triangle" width="100%" class="l_tri">
+
+
+	<!-- Now for the main event, the triangles in the middle -->
+	<div id="triangles">
+
+	<!-- I split them into rows so they could be displayed neatly and evenly spaced as a flexbox (css). Earlier drafts involved me placing all the triangles by creating them wherever they defaulted to and translating them to where I wanted them using css. This did not work. The spacing freaked out when you zoomed in or out. -->
+		<div id="top-row">													
+
+			<!-- Each triangle has an individual id so it can be easily referrenced in JS -->
+			<div class="start_tri_l" id="tri-w-c">		
+				<img src="triangle_c.png" alt="triangle" width="100%">
+			</div>
+
+			<!-- All of the static triangles share the same attributes, so come under the class "main_tri".-->
+			<div class="main_tri" id="tri-w">			
+				<img src="triangle_w.png" alt="triangle" width="100%">
+			</div>
+
+			<!-- The issue came when I had to have the css for some of them make them translate and rotate, whilst not being dumb and styling them all indivdually, so they could share the same attributes like size and stuff. I achieved this in an extremely janky way, by doing some drawings, figuring out which ones moved left and which ones moved right, and then creating the classes "tri_l" and "tri_r" respectivley. I also had to make a seperate class for the two special ones that fold down. These classes had the triangles positioned in their translated and rotated state, and I set up the shape and size and spacing of the site with the triangle completely folded out, before adding the "start" versions of the classes, which represent their starting positions (un-translated). I'm 100% certain there was a better way to go about this but I knew that at least this would work, after a few failed attempts. -->
+			<div class="start_tri_r" id="tri-w-b" style="z-index: 70" onclick="openInNewTab('whale.html')">
+				<img src="triangle_b.png" alt="triangle" width="100%">
+			</div>
+
+			<div class="main_tri" id="tri-s">
+				<img src="triangle_s.png" alt="triangle" width="100%">
+			</div>
+
+			<div class="start_tri_r" id="tri-s-c">
+				<img src="triangle_c.png" alt="triangle" width="100%">
+			</div>
+			
+		</div>
+
+		<div id="mid-row">
+
+			<!-- Here we see our trusty "openInNewTab" function! -->
+			<div class="start_tri_l" id="tri-d-b" style="z-index: 90" onclick="openInNewTab('dog.html')">
+				<img src="triangle_b.png" alt="triangle" width="100%">
+			</div>
+
+			<div class="main_tri" id="tri-d">
+				<img src="triangle_d.png" alt="triangle" width="100%">
+			</div>
+
+			<!-- Not much excitement here... more triangles. A quick thing: the z-index is like the order of the elements, here I adjusted them to try and stop the triangles from overlapping wierdly when they rotated. Remove them and mess around clicking tris to see what I mean. -->
+			<div class="start_tri_bottom" id="tri-s-b" style="z-index: 50" onclick="openInNewTab('seagull.html');">
+				<img src="triangle_b.png" alt="triangle" width="100%">
+			</div>
+
+		</div>
+
+		<div id="bottom-row">
+
+			<div class="start_tri_bottom" id="tri-d-c">
+				<img src="triangle_c.png" alt="triangle" width="100%">
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+	<!-- Yeah. Exciting right? It may look like just text, but through the power of JS, we can open a modal when it's clicked -->
+	<div class="credits">
+		credits
+	</div>
+
+
+	<!-- Modals are the popup windows that appear when you click some stuff on the page. I copied this from the w3schools website ngl - it's a really good resource for html, css, and javascript.-->
+
+	<!-- The Modal -->
+	<div id="w_modal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	    <span class="close">&times;</span>						<!-- This looks kinda scary but its just a big x symbol, good for making close buttons -->
+	    <iframe src="https://www.youtube.com/embed/camwxWcE9Gg"><!-- iframes are used for embedding videos -->
+		</iframe>
+	  </div>
+
+	</div>
+
+	<!-- The Modal -->
+	<div id="s_modal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	    <span class="close">&times;</span>
+	    <iframe src="https://www.youtube.com/embed/sAy2T4GiwKo">
+		</iframe>
+	  </div>
+
+	</div>
+
+	<!-- The Modal -->
+	<div id="d_modal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	    <span class="close">&times;</span>
+	    <iframe src="https://www.youtube.com/embed/PX0ru2UHTF4">
+		</iframe>
+	  </div>
+
+	</div>
+
+	<!-- The Modal -->
+	<div id="p_modal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	    <span class="close">&times;</span>
+	    <div class="numbers_box">
+	    	<div class="call_now">CALL NOW:</div>
+			<ul class="num_list">
+		    	<li><a href="Tel:0800 464 3202">0800 464 3202</a></li>
+		    	<li><a href="Tel:0800 464 3376">0800 464 3376</a></li>
+		    	<li><a href="Tel:0800 464 3411">0800 464 3411</a></li>
+		   	</ul>
+		   	<div class="num_info">numbers are not live</div>
+	    </div>
+	  </div>
+
+	</div>
+
+	<!-- The Modal -->
+	<div id="creds_modal" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	    <span class="close">&times;</span>
+	    <div class="numbers_box">
+	    	<div class="call_now">CREDITS</div>
+			<ul class="cred_list">
+		    	<li>performers (audio) : James Murphy-Stevens, Sian Aislinn Elder and Sam Parker</li>
+		    	<li>performers (live) : Fynn Roberts and Leigha-jo Henson</li>
+		    	<li>website, art and dog wrangler : Max Robins</li>
+		    	<li>testers : Ruby Sarah Woods, Tom Pettit, Mich Sanderson, and Florian Saturley</li>
+		    	<li>writer (words, code) and producer : Alex Robins</li>
+		    	
+		    	<li>special thanks : Plymouth Art Weekender, Visual Arts Plymouth, Jon Stephenson (Open Media)</li>
+		   	</ul>
+	    </div>
+	  </div>
+
+	</div>
+
+
+	<!-- Now we've got some spicy js, as indicated by the script tags - anything in these tags won't be displayed on the screen, it's all jsut read as executable code by the browser. -->
+
+	<!-- ngl, I'm not 100% sure what this is, I'm still not too familiar with jquery, using it for the first time in this project. The fact that I put this script here makes me think it's important though, even though there's no code inside... -->
+	<script src="jquery-3.5.1.min.js"></script>
+
+	<!-- Here it is! The famous "openInNewTab" script! -->
+	<script>
+		function openInNewTab(url) {
+		  var win = window.open(url, '_blank');
+		  win.focus();
+		}
+	</script>
+
+	<!-- All of this garbage is the code for toggling between the starting and translated versions of the triangle classes. It's actually quite easy to understand.  -->
+	<script>
+		$("#tri-w").click(function() {
+			$('#tri-w-c').toggleClass('start_tri_l').toggleClass('tri');
+			$('#tri-w-b').toggleClass('start_tri_r').toggleClass('tri');
+		});
+
+		$("#tri-s").click(function() {
+			$('#tri-s-c').toggleClass('start_tri_r').toggleClass('tri');
+			$('#tri-s-b').toggleClass('start_tri_bottom').toggleClass('tri');
+		});
+
+		$("#tri-d").click(function() {
+			$('#tri-d-c').toggleClass('start_tri_bottom').toggleClass('tri');
+			$('#tri-d-b').toggleClass('start_tri_l').toggleClass('tri');
+		});
+
+
+		// Wow, welcome to JS commenting, no more <!-- -->, we're in to double slashes now!
+		// Here are the functions for controlling the modals, I'll comment one - they're all the same but referring to different modals and elements.
+
+		$("#tri-w-c").click(function() {				// Basically, when an element (id "tri-w-c" in this case) is clicked, do this stuff.
+			$('#w_modal').css({"display":"block"});		// Here we change the css of an element (id "w_modal" in this case) to make it visible.
+		});
+		$(".close").click(function() {					// Basically, when an element (class "close" in this case) is clicked, do this stuff.
+			$('#w_modal').css({"display":"none"});		// Here we change the css of an element (id "w_modal" in this case) to make it invisible.
+		});
+		$(".modal").click(function() {					// Basically, when an element (class "modal" in this case) is clicked, do this stuff.
+			$('#w_modal').css({"display":"none"});		// Here we change the css of an element (id "w_modal" in this case) to make it invisible.
+		});
+														// What this means is that when we click the triangle, the modal appears, and when we click the close button, it disappears, but just for usability reasons, I made it so clicking the modal (anywhere on the screen) will close it too. Still not sure if I like this or not.
+		$("#tri-s-c").click(function() {
+			$('#s_modal').css({"display":"block"});
+		});
+		$(".close").click(function() {
+			$('#s_modal').css({"display":"none"});
+		});
+		$(".modal").click(function() {
+			$('#s_modal').css({"display":"none"});
+		});
+
+		$("#tri-d-c").click(function() {
+			$('#d_modal').css({"display":"block"});
+		});
+		$(".close").click(function() {
+			$('#d_modal').css({"display":"none"});
+		});
+		$(".modal").click(function() {
+			$('#d_modal').css({"display":"none"});
+		});
+
+		$(".l_tri").click(function() {
+			$('#p_modal').css({"display":"block"});
+		});
+		$(".close").click(function() {
+			$('#p_modal').css({"display":"none"});
+		});
+		$(".modal").click(function() {
+			$('#p_modal').css({"display":"none"});
+		});
+
+		$(".credits").click(function() {
+			$('#creds_modal').css({"display":"block"});
+		});
+		$(".close").click(function() {
+			$('#creds_modal').css({"display":"none"});
+		});
+		$(".modal").click(function() {
+			$('#creds_modal').css({"display":"none"});
+		});
+
+	</script>
+
+</body>
+
+</html>			<!-- Then we close the big ol' body and html tags and that's it! Not too bad eh? Now for the css! -->
