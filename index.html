@@ -17,18 +17,18 @@
 <body>
 
 	<div id="corners">
-		<img src="topleft.png" alt="triangles in top left" class="topleft">						<!-- This is just me creating the 4 corner images -->
-		<img src="topright.png" alt="triangles in top right" class="topright">					<!-- The "alt" text is what will be displayed if the -->
-		<img src="bottomleft.png" alt="triangles in bottom left" class="bottomleft">			<!-- image doesn't load or audio description is being -->
-		<img src="bottomright.png" alt="triangles in bottom right" class="bottomright">			<!-- used. Bonus points for accessability always! -->
+		<img src="corner_imgs/topleft.png" alt="triangles in top left" class="topleft">						<!-- This is just me creating the 4 corner images -->
+		<img src="corner_imgs/topright.png" alt="triangles in top right" class="topright">					<!-- The "alt" text is what will be displayed if the -->
+		<img src="corner_imgs/bottomleft.png" alt="triangles in bottom left" class="bottomleft">			<!-- image doesn't load or audio description is being -->
+		<img src="corner_imgs/bottomright.png" alt="triangles in bottom right" class="bottomright">			<!-- used. Bonus points for accessability always! -->
 	</div>
 
 
 	<!-- This stuff here is the twitter triangle. As you can see its just an image with a cheeky little "onlcick" command on the end, which calls the function openInNewTab, and for some reason, that isn't a default function. No, I don't know why. Yes, I copied it from the internet. You can find the actual code for it down at the bottom of the file with the rest of the JavaScript -->
-	<img src="triangle_t.png" alt="triangle" width="100%" class="r_tri" onclick="openInNewTab('https://twitter.com/hotlinecoldcall?s=20')">
+	<img src="tri_imgs/triangle_t.png" alt="triangle" width="100%" class="r_tri" onclick="openInNewTab('https://twitter.com/hotlinecoldcall?s=20')">
 
 	<!-- Here we create the phone triangle. As you can see, its just a boring old image, this is becasue the popup with the phone numbers isn't as simple as a hyperlink... we're gonna do some exciting JavaScript wizardry with modals... -->
-	<img src="triangle_p.png" alt="triangle" width="100%" class="l_tri">
+	<img src="tri_imgs/triangle_p.png" alt="triangle" width="100%" class="l_tri">
 
 
 	<!-- Now for the main event, the triangles in the middle -->
@@ -39,25 +39,25 @@
 
 			<!-- Each triangle has an individual id so it can be easily referrenced in JS -->
 			<div class="start_tri_l" id="tri-w-c">		
-				<img src="triangle_c.png" alt="triangle" width="100%">
+				<img src="tri_imgs/triangle_c.png" alt="triangle" width="100%">
 			</div>
 
 			<!-- All of the static triangles share the same attributes, so come under the class "main_tri".-->
 			<div class="main_tri" id="tri-w">			
-				<img src="triangle_w.png" alt="triangle" width="100%">
+				<img src="tri_imgs/triangle_w.png" alt="triangle" width="100%">
 			</div>
 
 			<!-- The issue came when I had to have the css for some of them make them translate and rotate, whilst not being dumb and styling them all indivdually, so they could share the same attributes like size and stuff. I achieved this in an extremely janky way, by doing some drawings, figuring out which ones moved left and which ones moved right, and then creating the classes "tri_l" and "tri_r" respectivley. I also had to make a seperate class for the two special ones that fold down. These classes had the triangles positioned in their translated and rotated state, and I set up the shape and size and spacing of the site with the triangle completely folded out, before adding the "start" versions of the classes, which represent their starting positions (un-translated). I'm 100% certain there was a better way to go about this but I knew that at least this would work, after a few failed attempts. -->
 			<div class="start_tri_r" id="tri-w-b" style="z-index: 70" onclick="openInNewTab('whale.html')">
-				<img src="triangle_b.png" alt="triangle" width="100%">
+				<img src="tri_imgs/triangle_b.png" alt="triangle" width="100%">
 			</div>
 
 			<div class="main_tri" id="tri-s">
-				<img src="triangle_s.png" alt="triangle" width="100%">
+				<img src="tri_imgs/triangle_s.png" alt="triangle" width="100%">
 			</div>
 
 			<div class="start_tri_r" id="tri-s-c">
-				<img src="triangle_c.png" alt="triangle" width="100%">
+				<img src="tri_imgs/triangle_c.png" alt="triangle" width="100%">
 			</div>
 			
 		</div>
@@ -66,16 +66,16 @@
 
 			<!-- Here we see our trusty "openInNewTab" function! -->
 			<div class="start_tri_l" id="tri-d-b" style="z-index: 90" onclick="openInNewTab('dog.html')">
-				<img src="triangle_b.png" alt="triangle" width="100%">
+				<img src="tri_imgs/triangle_b.png" alt="triangle" width="100%">
 			</div>
 
 			<div class="main_tri" id="tri-d">
-				<img src="triangle_d.png" alt="triangle" width="100%">
+				<img src="tri_imgs/triangle_d.png" alt="triangle" width="100%">
 			</div>
 
 			<!-- Not much excitement here... more triangles. A quick thing: the z-index is like the order of the elements, here I adjusted them to try and stop the triangles from overlapping wierdly when they rotated. Remove them and mess around clicking tris to see what I mean. -->
 			<div class="start_tri_bottom" id="tri-s-b" style="z-index: 50" onclick="openInNewTab('seagull.html');">
-				<img src="triangle_b.png" alt="triangle" width="100%">
+				<img src="tri_imgs/triangle_b.png" alt="triangle" width="100%">
 			</div>
 
 		</div>
@@ -83,7 +83,7 @@
 		<div id="bottom-row">
 
 			<div class="start_tri_bottom" id="tri-d-c">
-				<img src="triangle_c.png" alt="triangle" width="100%">
+				<img src="tri_imgs/triangle_c.png" alt="triangle" width="100%">
 			</div>
 
 		</div>
