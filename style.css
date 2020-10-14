@@ -79,6 +79,7 @@ p {
 
 .credits:hover{
 	filter: invert(100);
+	cursor: url("pointer.cur") 25 25, pointer;
 }
 
 .cred_list{
