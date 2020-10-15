@@ -40,6 +40,7 @@ a:visited {
 /* mouse over link */
 a:hover {
   color: #032DFB;
+  cursor: url("pointer.cur") 25 25, pointer;
 }
 
 /* selected link */
@@ -334,6 +335,10 @@ iframe {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+}
+
+.num_list:hover {
+	cursor: url("pointer.cur") 25 25, pointer;
 }
 
 .num_list li {
